@@ -1,0 +1,14 @@
+<?php
+  ////////////////////////////////////////////////////////////////
+  // Cat B コントローラ
+  ////////////////////////////////////////////////////////////////
+  class CatbController extends ControllerBase {
+
+    // 初期表示
+    // リストを取得
+    protected function listAction() {
+      return $this->Model->list();
+    }
+
+  }
+?>

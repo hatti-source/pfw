@@ -1,0 +1,75 @@
+    <!-- 文書 -->
+    <main>
+      <!-- 目次 -->
+      <nav class="grobal-navi">
+        <span>
+          <ul>
+            <li>
+              <a href="./">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="?p=cata&amp;a=list">
+                Cat A
+              </a>
+            </li>
+            <li>
+              <a href="?p=catb&amp;a=list">
+                Cat B
+              </a>
+            </li>
+            <li>
+              <a href="?p=catc&amp;a=list">
+                Cat C
+              </a>
+            </li>
+          </ul>
+        </span>
+      </nav>
+
+      <!-- 章 -->
+      <header class="chapter-header">
+        <h1 class="chapter">
+          <?php echo $this->ary_data[2]['name']; ?>
+        </h1>
+      </header>
+
+    <?php
+      foreach ( $this->ary_data as $data )
+      {
+        foreach ( $data as $K => $V )
+        {
+          if ( $K === 'cat_id' && $V === '3' )
+          {
+      echo '
+      <div class="inner">
+        <span class="datetime"></span>
+        <div class="pane">
+
+          <article>
+            <header>
+              <!-- 節 -->
+              <h2 class="section"></h2>
+            </header>
+
+            <section class="content">
+              <!-- 小節 -->
+              <p class="subsection"></p>';
+
+              echo $data['object'];
+
+      echo '
+            </section>
+
+          </article>
+
+        </div>
+
+      </div>';
+          }
+        }
+      }
+    ?>
+
+    </main>

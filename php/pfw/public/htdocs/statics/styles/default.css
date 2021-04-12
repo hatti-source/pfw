@@ -1,0 +1,142 @@
+@charset "utf-8";
+/*//////////////////////////////////////////////////////////////
+// レイアウト
+//////////////////////////////////////////////////////////////*/
+@import url( './root.css'        );
+@import url( './normalize.css'   );
+@import url( './parts/icons.css' );
+
+
+/* ------ ------ ------ *
+ * 表紙
+ * ------ ------ ------ */
+html#front-cover {
+  height: 100%;
+}
+#front-cover body {
+  height: 100%;
+}
+/*
+  ヘッダ
+*/
+#front-cover header {
+  height: 1rem;
+}
+/*
+  フッタ
+*/
+#front-cover footer {
+  position: absolute; bottom: 0; right: 0;
+  height: 1rem;
+}
+/* ------ ------ ------ *
+ * 共通
+ * ------ ------ ------ */
+/*
+  グローバルナビゲーション
+*/
+.grobal-navi {
+  overflow: hidden;
+  width: 100%;
+  /* + 2px の幅は、 :hover :active 時の横線表示部 */
+  height: calc( 2rem + 2px );
+  margin-bottom: 1rem;
+
+  border-top:    1px solid rgba( var( --color-bk ), var( --alpha-l ) );
+  border-bottom: 1px solid rgba( var( --color-bk ), var( --alpha-l ) );
+
+  box-shadow:  0px 2px 8px rgba( var( --color-bk ), var( --alpha-l ) );
+}
+.grobal-navi span {
+  overflow-x: auto;
+  display: block;
+  width:  100%;
+  height: 4rem;
+}
+.grobal-navi ul {
+  /* <li> 、 <li> 内のテキストの折り返しは行わない。 */
+  white-space: nowrap;
+}
+.grobal-navi li {
+  display: inline-block;
+}
+.grobal-navi li a {
+  display: block;
+  padding: 0.5rem;
+}
+.grobal-navi li a:hover {
+  border-bottom: 2px solid rgba( var( --color-r ), var( --alpha-h ) );
+}
+/*
+  フッタ
+*/
+footer p {
+  text-align: right;
+}
+/* ------ ------ ------ *
+ * 文書
+ * ------ ------ ------ */
+/*
+  編 / 部 PART
+*/
+/*
+  H1 章 Chapter
+*/
+.chapter-header {
+  text-align: left;
+  margin-bottom: 1rem;
+
+  border-top:    1px solid rgba( var( --color-bk ), var( --alpha-l ) );
+  border-bottom: 1px solid rgba( var( --color-bk ), var( --alpha-l ) );
+
+  box-shadow:  0px 2px 8px rgba( var( --color-bk ), var( --alpha-l ) );
+}
+.chapter {
+  font-size:  2rem;
+  font-weight: 700;
+
+  padding: 2rem 0 2rem 1.5rem;
+}
+/*
+  H2 節 Section
+*/
+.section {
+  position: relative;
+  color: rgba( var( --color-wt ), 1 );
+  font-weight: 700;
+  text-align: left;
+  background-color: rgba( var( --color-b ), 1 );
+  padding: 1rem;
+  padding-left: 1.5rem;
+}
+.section:after {
+  content: '';
+  display: block;
+  position: absolute; top: 50%; left: 0;
+  width:  1rem;
+  height: 0.25rem;
+  background-color: rgba( var( --color-wt ), var( --alpha-h ) );
+
+  transform: translateY( -50% );
+}
+/*
+  H3 小節 Subsection
+*/
+.subsection {
+  display: block;
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+.subsection:before {
+  content: '';
+  display: block;
+  position: absolute; bottom: -6px; left: 0;
+  width: 4rem;
+  height: 0.25rem;
+  background-image: linear-gradient(
+    to right,
+    rgba( var( --color-r ),  1 ),
+    rgba( var( --color-wt ), 1 )
+  );
+}

@@ -1,0 +1,85 @@
+@charset "utf-8";
+/*//////////////////////////////////////////////////////////////
+// アイコン
+//////////////////////////////////////////////////////////////*/
+/*
+  ロゴ ( 表紙 )
+*/
+.site-logo {
+  display: block;
+  position: absolute; top: 50%; left: 50%;
+  transform: translateX(-50%);
+  width:   4rem;
+  height: 16rem;
+
+  transform-style: preserve-3d;
+}
+.text-layer {
+  display: block;
+  position: absolute; top: 0; left: 0;
+  width:  100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  animation: site-logo 4s infinite alternate ease-in-out 0s;
+  transform: rotateX( 16deg ) rotateY( 16deg ) translateZ( 0 );
+}.text-layer::after {
+  white-space: pre; /* or pre-wrap */
+  content: 'PFW';
+  display: block;
+  position: absolute; top: 0; left: 0;
+  color: rgba( var( --color-wt ), 1 );
+  font-size:  4rem;
+  font-weight: 700;
+  font-family: var( --mincho );
+
+  text-shadow: 0px 2px 8px rgba( var( --color-bk ), 0.08 );
+}.text-layer:nth-child(1)::after {
+  transform: translateZ(0px);
+}.text-layer:nth-child(2)::after {
+  transform: translateZ(-1.5px);
+}.text-layer:nth-child(3)::after {
+  transform: translateZ(-3px);
+}.text-layer:nth-child(4)::after {
+  transform: translateZ(-4.5px);
+}.text-layer:nth-child(5)::after {
+  transform: translateZ(-6px);
+}.text-layer:nth-child(6)::after {
+  transform: translateZ(-7.5px);
+}.text-layer:nth-child(7)::after {
+  transform: translateZ(-9px);
+}.text-layer:nth-child(8)::after {
+  transform: translateZ(-10.5px);
+}.text-layer:nth-child(9)::after {
+  transform: translateZ(-12px);
+}.text-layer:nth-child(10)::after {
+  transform: translateZ(-13.5px);
+}
+.text-layer:nth-child( n + 6 )::after {
+  text-shadow:
+  -3px  0px 3px rgba( var( --color-b ), 1 ), /* ↑ */
+  -3px  3px 3px rgba( var( --color-b ), 1 ), /* ↗︎ */
+   0px  3px 3px rgba( var( --color-b ), 1 ), /* → */
+   3px  3px 3px rgba( var( --color-b ), 1 ), /* ↘︎ */
+   3px  0px 3px rgba( var( --color-b ), 1 ), /* ↓ */
+   3px -3px 3px rgba( var( --color-b ), 1 ), /* ↙︎ */
+   0px  3px 3px rgba( var( --color-b ), 1 ), /* ← */
+  -3px -3px 3px rgba( var( --color-b ), 1 ); /* ↖︎ */
+}
+.text-layer:nth-child(10)::after {
+  text-shadow:
+  -5px  0px 5px rgba( var( --color-bk ), 1 ), /* ↑ */
+  -5px  5px 5px rgba( var( --color-bk ), 1 ), /* ↗︎ */
+   0px  5px 5px rgba( var( --color-bk ), 1 ), /* → */
+   5px  5px 5px rgba( var( --color-bk ), 1 ), /* ↘︎ */
+   5px  0px 5px rgba( var( --color-bk ), 1 ), /* ↓ */
+   5px -5px 5px rgba( var( --color-bk ), 1 ), /* ↙︎ */
+   0px  5px 5px rgba( var( --color-bk ), 1 ), /* ← */
+  -5px -5px 5px rgba( var( --color-bk ), 1 ); /* ↖︎ */
+}
+
+@keyframes site-logo {
+  100% {
+    transform: rotateX( -16deg ) rotateY( -16deg );
+  }
+}

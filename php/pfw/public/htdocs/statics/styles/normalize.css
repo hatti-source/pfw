@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*//////////////////////////////////////////////////////////////
+// ノーマライズ
+//////////////////////////////////////////////////////////////*/
+html {
+ /* 文字サイズの基準値を設定 */
+  font-size: var( --size-M );
+  text-align: center;
+  background-color: rgba( var( --color-wt ), var( --alpha-l ) );
+}
+body {
+  font-family: var( --gothic );
+  line-height: 1;
+  text-align: left;
+  margin: 0;
+
+  background-color: rgba( var( --color-wt ), 1 );
+  min-width: 336px;
+}
+h1 {
+  font-size:  1rem;
+  font-weight: 400;
+  text-align: left;
+  margin-top:    0;
+  margin-bottom: 0;
+}
+h2 {
+  font-size:  1rem;
+  font-weight: 400;
+  text-align: left;
+  margin-top:    0;
+  margin-bottom: 0;
+}
+h3 {
+  font-size:  1rem;
+  font-weight: 400;
+  text-align: left;
+  margin-top:    0;
+  margin-bottom: 0;
+}
+h4 {
+  /*font-size: 1rem;*/
+  font-weight: 400;
+  text-align: left;
+  margin-top:    0;
+  margin-bottom: 0;
+}
+p {
+  /*font-size:  1rem;*/
+  /*font-weight: 400;*/
+  text-align: left;
+  margin-top:    0;
+  margin-bottom: 0;
+}
+ul {
+  text-align: left;
+  margin-top:    0;
+  margin-bottom: 0;
+  padding-left:  0;
+  list-style-type: none;
+}
+dl {
+  margin-top:    0;
+  margin-bottom: 0;
+}
+dt {
+}
+dd {
+  margin-left: 0;
+}
+a {
+  text-decoration: none;
+}
+
+table {
+  /* 隣接するセルで境界線を共有 */
+  border-collapse: collapse;
+}
